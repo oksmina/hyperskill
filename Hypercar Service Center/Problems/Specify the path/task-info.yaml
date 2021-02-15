@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    import re
+
+    path = 'C:\tasks\Hyperskill\new'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9760#comment
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9760#comment">JetBrains
+    Academy</a></html>
+  time: Mon, 30 Nov 2020 09:49:04 UTC
+record: -1

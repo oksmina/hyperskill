@@ -1,0 +1,40 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>There are two or three hard-working mechanics based in the service center each day, and they deal with clients in the order they arrive. If several arrive at the same time, the line of waiting customers can become really long. Usually, diagnostic tests take <strong>30 minutes</strong>, inflating tires takes <strong>5 minutes</strong>, and oil changes take about <strong>2 minutes</strong>.</p>
+
+<p>The company conducted a survey and discovered that customers are prepared to wait in the queue for more time if the service they require takes longer. To reflect this, a new processing algorithm now needs to be implemented:</p>
+
+<ol>
+	<li>Any customers waiting in line for an oil change should be served first.</li>
+	<li>Those who want their tires inflated should be dealt with next.</li>
+	<li>Customers who require a diagnostics check should be served last.</li>
+</ol>
+
+<p>Tickets should be given a reference number so they can be distinguished from each other. The first ticket issued should be number 1, the second should be number 2, and so on. Not all customers are prepared to wait for a long time, so the system also needs to display an estimate of how long it will be until their turn. Don't forget that the line is processed in a particular order!</p>
+
+<h2 style="text-align: center;">Objectives</h2>
+
+<p>Your task is to create a handler that gives tickets to the clients. The handler should serve <em>GET</em> requests on the following URLs:</p>
+
+<ul>
+	<li><em>&lt;base_url&gt;/get_ticket/change_oil</em></li>
+	<li><em>&lt;base_url&gt;/get_ticket/inflate_tires</em></li>
+	<li><em>&lt;base_url&gt;/get_ticket/diagnostic</em></li>
+</ul>
+
+<p>Each page should contain a <code class="language-html">&lt;div&gt;</code> element with the content "<em>Your number is &lt;ticket_number&gt;</em>", where <em>&lt;ticket_number&gt;</em> is the ticket's reference number. To calculate the estimated time, you should sum the time it will take to process all the tickets that will be worked on before the current one, according to the algorithm above. The estimated time should be in a <code class="language-html">&lt;div&gt;</code> element with the content "<em>Please wait around &lt;minutes_to_wait&gt; minutes</em>" where <em>&lt;minutes_to_wait&gt;</em> is the number of estimated minutes:</p>
+
+<pre><code class="language-html">&lt;div&gt;Your number is 7&lt;/div&gt;
+&lt;div&gt;Please wait around 49 minutes&lt;/div&gt;</code></pre>
+
+<p><div class="alert alert-primary"> To store the data, you can use Python dictionaries and lists. For example, you could create a dictionary called <code class="language-html">line_of_cars</code> with keys matching the service names and values that are the lists of customer tickets. </div></p>
+
+<h2 style="text-align: center;">Examples</h2>
+
+<p>If you have two customers that require an oil change, three clients waiting for their tires to be inflated, and one needing diagnostics, the estimated time for the next customer would be one of the following:</p>
+
+<ul>
+	<li>To change oil: 2 * <strong>2 minutes</strong> = 4 minutes</li>
+	<li>To inflate tires: 2 * <strong>2 minutes</strong> + 3 * <strong>5 minutes</strong> = 19 minutes</li>
+	<li>To get diagnostics: 2 * <strong>2 minutes</strong> + 3 * <strong>5 minutes</strong> + 1 * <strong>30 minutes</strong> = 49 minutes</li>
+</ul>

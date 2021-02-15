@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def grades(x):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10379
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/10379">JetBrains
+    Academy</a></html>
+  time: Wed, 14 Oct 2020 08:04:17 UTC
+record: -1

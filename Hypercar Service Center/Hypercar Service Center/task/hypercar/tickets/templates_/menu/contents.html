@@ -1,0 +1,8 @@
+<h2> Menu </h2>
+<ul>
+  {% for imenu in menu %}
+  <li>
+    <a href="/menu/{{ forloop.counter }}">imenu {{ forloop.counter }}</a>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,1 @@
+print(random_dict.setdefault(word, "Not in the dictionary"))

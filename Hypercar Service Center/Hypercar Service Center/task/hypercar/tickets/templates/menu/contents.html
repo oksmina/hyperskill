@@ -1,0 +1,8 @@
+<h2> Menu </h2>
+<ul>
+  {% for imenu, value in menu.items %}
+  <li>
+    <a href="/get_ticket/{{ value }}">{{ imenu }}</a>
+  </li>
+  {% endfor %}
+</ul>
